@@ -21,6 +21,13 @@ export class TasksService {
     this.tasks.splice(taskIndex, 1);
   }
 
+  public updateTaskStatus(id: string, status: TaskStatus): Task {
+    const updateTask = this.getTaskById(id);
+    updateTask.status = status;
+    this.tasks.map((task) => (task.id === id ? updateTask : task));
+    return updateTask;
+  }
+
   public createTask(createTaskDto: CreateTaskDto): Task {
     const { title, description } = createTaskDto;
     const task: Task = {
