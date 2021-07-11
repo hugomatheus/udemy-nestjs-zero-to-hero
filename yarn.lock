@@ -588,7 +588,7 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@nestjs/cli@^8.0.0":
+"@nestjs/cli@^8.0.2":
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/@nestjs/cli/-/cli-8.0.2.tgz#04872a17dbbc966a1545302a61bb5e96ea4d89f6"
   integrity sha512-q46mQvqhRkmnG6fXTzL9Wk7CtDxRaa2rE1IrDX3CgXaeOgjBZsA3oJKkIqelQHfKWvPGuU6yV6gDF5pOXNXixw==
