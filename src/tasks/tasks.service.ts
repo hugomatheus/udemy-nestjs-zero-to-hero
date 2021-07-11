@@ -11,6 +11,11 @@ export class TasksService {
     return this.tasks;
   }
 
+  public getTaskById(id: string) {
+    const task = this.tasks.find((task) => task.id === id);
+    return task;
+  }
+
   public createTask(createTaskDto: CreateTaskDto): Task {
     const { title, description } = createTaskDto;
     const task: Task = {
