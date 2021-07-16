@@ -5,8 +5,9 @@ import {
   PrimaryColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { TaskStatus } from '../task-status.enum';
 import { v4 as uuid } from 'uuid';
+import { TaskStatus } from '../task-status.enum';
+
 @Entity('tasks')
 export class Task {
   @PrimaryColumn()

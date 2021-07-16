@@ -639,6 +639,11 @@
     tslib "2.3.0"
     uuid "8.3.2"
 
+"@nestjs/mapped-types@*":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@nestjs/mapped-types/-/mapped-types-1.0.0.tgz#52a0441795f6da8144a35970d3ebc19281f31cfd"
+  integrity sha512-26AW5jHadLXtvHs+M+Agd9KZ92dDlBrmD0rORlBlvn2KvsWs4JRaKl2mUsrW7YsdZeAu3Hc4ukqyYyDdyCmMWQ==
+
 "@nestjs/platform-express@^8.0.0":
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-8.0.1.tgz#c5517fae4b1f4507122f75c098873aac864f96d1"
@@ -661,10 +666,10 @@
     jsonc-parser "3.0.0"
     pluralize "8.0.0"
 
-"@nestjs/testing@^8.0.0":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-8.0.1.tgz#4fe6abaa0392014559c97a9db79549bf839cde65"
-  integrity sha512-GpARAxTFQmSKA23Fd+5bVGW+RiYyderRgthy31XfDETbmtN/FkAs8OcCTRBFcJXNJb666+Y/aJKc/M5s9q/YMA==
+"@nestjs/testing@^8.0.3":
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-8.0.3.tgz#54382daceaaef1903fab1613cd3ff4878f908198"
+  integrity sha512-189C+qxL0YtsPr8m9yx2hL0tAQYM0bSJxguHtZJuP277lIX9brHA6M6KR+Xn3TgK8GrBXvtViAXG35uo2JI64g==
   dependencies:
     optional "0.1.4"
     tslib "2.3.0"
