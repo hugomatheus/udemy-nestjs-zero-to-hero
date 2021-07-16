@@ -1,5 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { GetTaskFilterDto } from 'src/tasks/dto/get-tasks-filters.dto';
+import { UpdateResult } from 'typeorm';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
 import { Task } from './entities/task.entity';
@@ -33,8 +34,11 @@ export class TasksService {
     return task;
   }
 
-  update(id: string, updateTaskDto: UpdateTaskDto) {
-    return `This action updates a #${id} task`;
+  async update(id: string, updateTaskDto: UpdateTaskDto): Promise<Task> {
+    await this.findOne(id);
+    await this.tasksRepository.update(id, updateTaskDto);
+    const task = await this.findOne(id);
+    return task;
   }
 
   async updateStatus(id: string, status: TaskStatus): Promise<Task> {
