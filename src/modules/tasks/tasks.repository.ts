@@ -1,4 +1,4 @@
-import { GetTaskFilterDto } from 'src/tasks/dto/get-tasks-filters.dto';
+import { GetTaskFilterDto } from 'src/modules/tasks/dto/get-tasks-filters.dto';
 import { Brackets, EntityRepository, Repository } from 'typeorm';
 import { Task } from './entities/task.entity';
 

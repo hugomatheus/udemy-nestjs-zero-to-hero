@@ -1,5 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { GetTaskFilterDto } from 'src/tasks/dto/get-tasks-filters.dto';
+import { GetTaskFilterDto } from 'src/modules/tasks/dto/get-tasks-filters.dto';
 import { UpdateResult } from 'typeorm';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
