@@ -4,6 +4,6 @@ import { User } from '../users/entities/user.entity';
 export const GetUser = createParamDecorator(
   (_data, context: ExecutionContext): User => {
     const request = context.switchToHttp().getRequest();
-    return request.user;
+    return request.user.id;
   },
 );
