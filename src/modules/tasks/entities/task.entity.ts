@@ -1,7 +1,11 @@
+import { User } from 'src/modules/users/entities/user.entity';
 import {
   Column,
   CreateDateColumn,
+  DeleteDateColumn,
   Entity,
+  JoinColumn,
+  ManyToOne,
   PrimaryColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -27,6 +31,16 @@ export class Task {
 
   @UpdateDateColumn()
   updated_at: Date;
+
+  @DeleteDateColumn()
+  deleted_at: Date;
+
+  @Column()
+  user_id: string;
+
+  @ManyToOne(() => User, (user) => user.tasks, { eager: false })
+  @JoinColumn({ name: 'user_id' })
+  user: User;
 
   constructor() {
     if (!this.id) {

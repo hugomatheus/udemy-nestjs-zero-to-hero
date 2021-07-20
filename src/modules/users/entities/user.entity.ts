@@ -1,8 +1,10 @@
+import { Task } from 'src/modules/tasks/entities/task.entity';
 import {
   Column,
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
+  OneToMany,
   PrimaryColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -33,7 +35,10 @@ export class User {
   updated_at: Date;
 
   @DeleteDateColumn()
-  delete_at: Date;
+  deleted_at: Date;
+
+  @OneToMany(() => Task, (task) => task.user, { eager: true })
+  tasks: Task[];
 
   constructor() {
     if (!this.id) {
